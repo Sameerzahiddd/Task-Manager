@@ -1,0 +1,17 @@
+/* src/pages/ListPage.css */
+
+.list-page {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .add-task-button {
+    background-color: #4caf50;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  

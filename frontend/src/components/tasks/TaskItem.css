@@ -1,0 +1,86 @@
+/* src/components/tasks/TaskItem.css */
+
+.task-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 80%;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column; /* Arrange content vertically */
+  transition: background-color 0.3s;
+}
+
+.task-item:hover {
+  background-color: #f9f9f9; /* Slight hover effect for better UX */
+}
+
+.task-details {
+  display: flex;
+  align-items: center;
+  cursor: pointer; /* Cursor indicates clickability for collapsible tasks */
+}
+
+/* Checkbox styling */
+.task-details input {
+  margin-right: 0.5rem;
+}
+
+/* Collapsible indicator */
+.task-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.task-name.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Arrow indicators for expand/collapse */
+.task-name::before {
+  content: "▶"; /* Collapsed arrow by default */
+  margin-right: 0.3rem;
+  font-size: 0.8rem;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.task-name.expanded::before {
+  content: "▼"; /* Expanded arrow when task is open */
+  transform: rotate(90deg);
+}
+
+/* Subtask container */
+.subtask-container {
+  display: none; /* Hide subtasks by default */
+  padding-left: 1rem; /* Indent subtasks inside the parent task box */
+  margin-top: 0.5rem;
+  border-left: 2px solid #ddd; /* Visual indication of nested structure */
+}
+
+.subtask-container.expanded {
+  display: block; /* Show subtasks when expanded */
+}
+
+/* Task actions button styling */
+.task-actions button {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-actions button:hover {
+  background-color: #555;
+}
+
+/* Additional styles for Add Subtask form */
+.add-subtask-form {
+  margin-top: 0.5rem;
+}
